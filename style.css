@@ -1,0 +1,145 @@
+/* ===== 全站基础设置 ===== */
+/* 这一段管"整页统一"的东西：字体、背景色、行距。想换配色，先改这里 3 个变量。 */
+:root {
+  --ink: #1c1c1e;        /* 主文字颜色（近黑） */
+  --muted: #6b6b70;      /* 次要文字（灰） */
+  --line: #e5e5e8;       /* 分割线颜色 */
+  --accent: #146a52;     /* 强调色（深绿，用在标题、链接） */
+  --bg: #fbfbf9;         /* 页面背景（偏暖的白） */
+}
+
+* {
+  box-sizing: border-box; /* 让内边距不把宽度撑爆，新手最容易踩的布局坑 */
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.75;
+  font-size: 16px;
+  /* 中文网页常用这套字体栈：先苹果、再微软雅黑，找不到就退回系统默认 */
+}
+
+/* ===== 页头区（名字 + 一句话 + 联系方式） ===== */
+.hero {
+  max-width: 760px;   /* 内容最宽 760px，太宽了眼睛追字累 */
+  margin: 0 auto;     /* 左右自动 = 居中 */
+  padding: 64px 24px 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  color: var(--muted);
+  margin: 0 0 24px;
+  font-size: 16px;
+}
+
+.contact {
+  font-size: 15px;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.contact a:hover {
+  border-bottom-color: var(--accent); /* 鼠标移上去出现下划线，成本最低的"交互感" */
+}
+
+.contact span {
+  color: var(--line);
+  margin: 0 8px;
+}
+
+/* ===== 正文区 ===== */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8px 24px 56px;
+}
+
+section {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0 0 16px;
+  color: var(--accent);
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+/* 作品列表里，标题和说明分两行 */
+.works {
+  list-style: none;
+  padding-left: 0;
+}
+
+.works li {
+  margin-bottom: 16px;
+}
+
+.works a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--line);
+}
+
+.works a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.meta {
+  display: block;      /* 让说明文字单独占一行 */
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+/* ===== 页脚 ===== */
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--line);
+}
+
+/* ===== 手机上（屏幕宽度小于 640px 时生效） ===== */
+@media (max-width: 640px) {
+  .hero {
+    padding: 40px 18px 24px;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  main {
+    padding: 8px 18px 40px;
+  }
+}

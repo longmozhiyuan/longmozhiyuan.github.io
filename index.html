@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- 上面这行是"文件类型声明"，告诉浏览器：这是 HTML5 网页。删了它页面可能变形，别动。 -->
+<html lang="zh-CN">
+<!-- lang="zh-CN" 告诉浏览器和搜索引擎：这页是简体中文。 -->
+
+<head>
+  <!-- head 里的东西不显示在页面上，只给浏览器看（标题、编码、样式表）。 -->
+  <meta charset="utf-8">
+  <!-- charset=utf-8 是"文字编码"，没有它中文可能变成乱码。必须留。 -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 让手机打开时按手机屏幕宽度排版，不加这行手机上字会特别小。 -->
+
+  <title>你的名字 · 个人主页</title>
+  <!-- 这行字显示在浏览器标签页上，也是别人分享链接时看到的标题。改这里。 -->
+
+  <link rel="stylesheet" href="style.css">
+  <!-- 引入同文件夹里的 style.css（所有颜色、字号、间距都在那里面）。 -->
+</head>
+
+<body>
+  <!-- body 里才是别人看得到的内容。顺序从上到下就是页面从上到下。 -->
+
+  <header class="hero">
+    <h1>梁梓烨</h1>
+    <!-- h1 是全页最大的标题，一个人页面只放一个。 -->
+
+    <p class="tagline">大一，熟练掌握agentic AI，GitHub上部署过3个项目</p>
+    <!-- 一句话介绍自己。招聘方看这行判断"要不要往下看"。 -->
+
+    <p class="contact">
+      <a href="mailto:352526375@qq.com">邮箱</a>
+      <span>·</span>
+      <a href="https://longmozhiyuan.github.io">主页</a>
+      <span>·</span>
+      <a href="https://github.com/longmozhiyuan">GitHub</a>
+    </p>
+    <!-- a 标签是链接；href 引号里换成真实地址。mailto: 后面跟邮箱，点了会自动打开邮箱。 -->
+  </header>
+
+  <main>
+    <!-- main 是正文区。 -->
+
+    <section>
+      <h2>我具体会什么</h2>
+      <!-- h2 是二级标题，每个板块一个。 -->
+      <ul class="skills">
+        <li>Python 基础：变量、输入输出、数据类型</li>
+        <li>用 AI 工具做重复工作（批量改名、整理表格）</li>
+        <li>GitHub 建仓库、发布网页</li>
+      </ul>
+      <!-- ul 是列表，每一行 li 是一条。加一条就复制一整行 li。 -->
+    </section>
+
+    <section>
+      <h2>做过的东西</h2>
+      <ul class="works">
+        <li>
+          <a href="https://github.com/你的用户名/你的仓库">DSH插件</a>
+          <span class="meta">dsh内置chat的插件</span>
+        </li>
+        <li>
+          <a href="https://你的飞书文档链接">我的作品集（飞书文档）</a>
+          <span class="meta">每节课的产出和验收记录</span>
+        </li>
+      </ul>
+      <!-- 加作品：复制一整条 li（从 <li> 到 </li>），改链接和文字。 -->
+    </section>
+
+    <section>
+      <h2>联系方式</h2>
+      <p>邮箱：你的邮箱@example.com　|　微信：你的微信号</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>本页由我自己手写 HTML/CSS，托管在 GitHub Pages。</p>
+    <!-- footer 是页脚，可以写版权、更新日期。 -->
+  </footer>
+</body>
+</html>
